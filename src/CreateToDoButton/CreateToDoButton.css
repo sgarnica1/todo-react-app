@@ -1,0 +1,24 @@
+.CreateToDoButton {
+  width: 100%;
+}
+
+.CreateToDoButton__button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  background: #41729f;
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+
+.CreateToDoButton__button:hover {
+  transform: rotate(180deg);
+}
