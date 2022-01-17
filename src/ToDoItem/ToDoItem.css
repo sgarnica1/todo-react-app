@@ -12,14 +12,16 @@
 }
 
 .ToDoItem__check-mark {
-  transform: rotate(180deg);
-  margin-top: -16px;
   color: #41729f;
   font-weight: 800;
-  font-size: 26px;
+  font-size: 17px;
   cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
 }
 
+.ToDoItem__check-mark:hover,
 .ToDoItem__check-mark.active {
   color: greenyellow;
 }
@@ -36,10 +38,13 @@
 }
 
 .ToDoItem__delete {
-  color: #5885af;
+  color: #d65e49;
+  outline: none;
   font-weight: 800;
   font-size: 18px;
+  background: none;
   cursor: pointer;
+  border: none;
 }
 
 .ToDoItem__delete:hover {

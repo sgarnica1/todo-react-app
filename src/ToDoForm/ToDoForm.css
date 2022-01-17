@@ -1,0 +1,61 @@
+.ToDoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 250px;
+  width: 50%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 -4px 12px 0 rgba(0, 0, 0, 0.5);
+  color: black;
+}
+
+.ToDoForm label {
+  font-size: 26px;
+  color: #274472;
+  font-weight: 600;
+}
+
+.ToDoForm textarea {
+  width: 90%;
+  min-height: 150px;
+  margin: 10px 0;
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  resize: none;
+}
+
+.ToDoForm .ToDoForm__button-container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.ToDoForm .ToDoForm__button-container button {
+  outline: none;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  max-width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.ToDoForm .ToDoForm__button-container button:last-of-type {
+  background-color: #41729f;
+  color: white;
+}
+
+.ToDoForm .ToDoForm__button-container button:last-of-type:hover {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.5);
+}

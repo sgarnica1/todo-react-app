@@ -17,6 +17,7 @@
   border-radius: 50%;
   transition: ease 0.5s;
   cursor: pointer;
+  z-index: 999999;
 }
 
 .CreateToDoButton__button:hover {

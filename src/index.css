@@ -11,6 +11,6 @@ code {
 
 #root {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #c3e0e5;
 }
