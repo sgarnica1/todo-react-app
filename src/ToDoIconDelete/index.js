@@ -1,5 +1,6 @@
 import React from "react";
 import { MdDelete } from "react-icons/md";
+import './ToDoIconDelete.css'
 
 function ToDoIconDelete(props) {
   return (

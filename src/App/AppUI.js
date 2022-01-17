@@ -7,6 +7,11 @@ import { ToDoItem } from "../ToDoItem";
 import { CreateToDoButton } from "../CreateToDoButton";
 import { ToDoForm } from "../ToDoForm";
 import { Modal } from "../Modal";
+import { LoadingToDos } from "../LoadingToDos";
+import { EmptyToDos } from "../EmptyToDos";
+import { ToDosError } from "../ToDosError";
+import { ToDoIconCheck } from "../ToDoIconCheck";
+import { ToDoIconDelete } from "../ToDoIconDelete";
 
 function AppUI() {
   const {
@@ -24,18 +29,23 @@ function AppUI() {
       <ToDoCounter />
       <ToDoSearch />
       <ToDoList>
-        {error && <p>Error al cargar</p>}
-        {loading && <p>Cargando...</p>}
-        {!loading && !filteredTodos.length && <p>Crea tu primer ToDo</p>}
-        {filteredTodos.map((todo) => (
-          <ToDoItem
-            key={todo.text}
-            text={todo.text}
-            completed={todo.completed}
-            onComplete={() => toggleCompleteTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
-          />
-        ))}
+        {error && <ToDosError error={error} />}
+        {!error &&
+          loading &&
+          new Array(3).fill().map((item, index) => <LoadingToDos key={index}/>)}
+        {!error && !loading && !filteredTodos.length && <EmptyToDos />}
+        {!error &&
+          filteredTodos.map((todo) => (
+            <ToDoItem
+              key={todo.text}
+              text={todo.text}
+              completed={todo.completed}
+              onComplete={() => toggleCompleteTodo(todo.text)}
+              onDelete={() => deleteTodo(todo.text)}
+              ToDoIconCheck={ToDoIconCheck}
+              ToDoIconDelete={ToDoIconDelete}
+            />
+          ))}
       </ToDoList>
 
       {openModal && (

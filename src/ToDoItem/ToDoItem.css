@@ -11,21 +11,6 @@
   padding: 0 10px;
 }
 
-.ToDoItem__check-mark {
-  color: #41729f;
-  font-weight: 800;
-  font-size: 17px;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background: none;
-}
-
-.ToDoItem__check-mark:hover,
-.ToDoItem__check-mark.active {
-  color: greenyellow;
-}
-
 .ToDoItem__text {
   padding: 0 10px;
   font-weight: 600;
@@ -35,18 +20,4 @@
 .ToDoItem__text.complete {
   text-decoration: line-through;
   color: #5885af;
-}
-
-.ToDoItem__delete {
-  color: #d65e49;
-  outline: none;
-  font-weight: 800;
-  font-size: 18px;
-  background: none;
-  cursor: pointer;
-  border: none;
-}
-
-.ToDoItem__delete:hover {
-  color: rgb(172, 19, 19);
 }

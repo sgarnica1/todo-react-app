@@ -1,0 +1,13 @@
+.ToDoItem__delete {
+  color: #d65e49;
+  outline: none;
+  font-weight: 800;
+  font-size: 18px;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+.ToDoItem__delete:hover {
+  color: rgb(172, 19, 19);
+}

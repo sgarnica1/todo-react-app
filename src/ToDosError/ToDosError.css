@@ -1,0 +1,22 @@
+.ToDosError {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ToDosError img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.ToDosError h2 {
+  margin-bottom: 0;
+  font-size: 26px;
+  color: #274472;
+}
+
+.ToDosError p {
+  color: #41729f;
+}
