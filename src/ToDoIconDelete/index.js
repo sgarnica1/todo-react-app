@@ -1,13 +1,13 @@
 import React from "react";
 import { MdDelete } from "react-icons/md";
-import './ToDoIconDelete.css'
+import './TodoIconDelete.css'
 
-function ToDoIconDelete(props) {
+function TodoIconDelete(props) {
   return (
-    <button className="ToDoItem__delete" onClick={props.onDelete}>
+    <button className="TodoItem__delete" onClick={props.onDelete}>
       <MdDelete />
     </button>
   );
 }
 
-export { ToDoIconDelete };
+export { TodoIconDelete };

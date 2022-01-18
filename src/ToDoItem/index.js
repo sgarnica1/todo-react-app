@@ -1,17 +1,17 @@
 import React from "react";
-import "./ToDoItem.css";
+import "./TodoItem.css";
 
-export function ToDoItem(props) {
+export function TodoItem(props) {
   return (
-    <li className="ToDoItem">
-      <props.ToDoIconCheck
+    <li className="TodoItem">
+      <props.TodoIconCheck
         completed={props.completed}
         onComplete={props.onComplete}
       />
-      <p className={`ToDoItem__text ${props.completed && "complete"}`}>
+      <p className={`TodoItem__text ${props.completed && "complete"}`}>
         {props.text}
       </p>
-      <props.ToDoIconDelete 
+      <props.TodoIconDelete 
         onDelete={props.onDelete}
       />
     </li>

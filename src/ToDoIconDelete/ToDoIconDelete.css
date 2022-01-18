@@ -1,4 +1,4 @@
-.ToDoItem__delete {
+.TodoItem__delete {
   color: #d65e49;
   outline: none;
   font-weight: 800;
@@ -8,6 +8,6 @@
   border: none;
 }
 
-.ToDoItem__delete:hover {
+.TodoItem__delete:hover {
   color: rgb(172, 19, 19);
 }

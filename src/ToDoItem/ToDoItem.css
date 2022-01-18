@@ -1,4 +1,4 @@
-.ToDoItem {
+.TodoItem {
   margin-bottom: 20px;
   min-height: 50px;
   width: 80%;
@@ -11,13 +11,13 @@
   padding: 0 10px;
 }
 
-.ToDoItem__text {
+.TodoItem__text {
   padding: 0 10px;
   font-weight: 600;
   color: #274472;
 }
 
-.ToDoItem__text.complete {
+.TodoItem__text.complete {
   text-decoration: line-through;
   color: #5885af;
 }

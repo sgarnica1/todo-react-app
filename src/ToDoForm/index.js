@@ -1,11 +1,11 @@
 import React from "react";
-import { ToDoContext } from "../ToDoContext";
-import './ToDoForm.css'
+import { TodoContext } from "../TodoContext";
+import './TodoForm.css'
 
-function ToDoForm() {
+function TodoForm() {
   const [newTodoValue, setNewTodoValue] = React.useState("");
 
-  const { setOpenModal, addTodo } = React.useContext(ToDoContext);
+  const { setOpenModal, addTodo } = React.useContext(TodoContext);
 
   const onChange = (event) => {
     setNewTodoValue(event.target.value);
@@ -22,14 +22,14 @@ function ToDoForm() {
   };
 
   return (
-    <form onSubmit={onSubmit} className="ToDoForm">
+    <form onSubmit={onSubmit} className="TodoForm">
       <label>Add TODO</label>
       <textarea
         value={newTodoValue}
         onChange={onChange}
         placeholder="Bake birthday cake"
       ></textarea>
-      <div className="ToDoForm__button-container">
+      <div className="TodoForm__button-container">
         <button type="button" onClick={onCancel}>
           Cancel
         </button>
@@ -39,4 +39,4 @@ function ToDoForm() {
   );
 }
 
-export { ToDoForm };
+export { TodoForm };

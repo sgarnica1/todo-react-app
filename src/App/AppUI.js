@@ -1,17 +1,17 @@
 import React from "react";
-import { ToDoContext } from "../ToDoContext";
-import { ToDoCounter } from "../ToDoCounter";
-import { ToDoSearch } from "../ToDoSearch";
-import { ToDoList } from "../ToDoList";
-import { ToDoItem } from "../ToDoItem";
-import { CreateToDoButton } from "../CreateToDoButton";
-import { ToDoForm } from "../ToDoForm";
+import { TodoContext } from "../TodoContext";
+import { TodoCounter } from "../TodoCounter";
+import { TodoSearch } from "../TodoSearch";
+import { TodoList } from "../TodoList";
+import { TodoItem } from "../TodoItem";
+import { CreateTodoButton } from "../CreateTodoButton";
+import { TodoForm } from "../TodoForm";
 import { Modal } from "../Modal";
-import { LoadingToDos } from "../LoadingToDos";
-import { EmptyToDos } from "../EmptyToDos";
-import { ToDosError } from "../ToDosError";
-import { ToDoIconCheck } from "../ToDoIconCheck";
-import { ToDoIconDelete } from "../ToDoIconDelete";
+import { LoadingTodos } from "../LoadingTodos";
+import { EmptyTodos } from "../EmptyTodos";
+import { TodosError } from "../TodosError";
+import { TodoIconCheck } from "../TodoIconCheck";
+import { TodoIconDelete } from "../TodoIconDelete";
 
 function AppUI() {
   const {
@@ -22,39 +22,39 @@ function AppUI() {
     deleteTodo,
     openModal,
     setOpenModal,
-  } = React.useContext(ToDoContext);
+  } = React.useContext(TodoContext);
 
   return (
     <React.Fragment>
-      <ToDoCounter />
-      <ToDoSearch />
-      <ToDoList>
-        {error && <ToDosError error={error} />}
+      <TodoCounter />
+      <TodoSearch />
+      <TodoList>
+        {error && <TodosError error={error} />}
         {!error &&
           loading &&
-          new Array(3).fill().map((item, index) => <LoadingToDos key={index}/>)}
-        {!error && !loading && !filteredTodos.length && <EmptyToDos />}
+          new Array(3).fill().map((item, index) => <LoadingTodos key={index}/>)}
+        {!error && !loading && !filteredTodos.length && <EmptyTodos />}
         {!error &&
           filteredTodos.map((todo) => (
-            <ToDoItem
+            <TodoItem
               key={todo.text}
               text={todo.text}
               completed={todo.completed}
               onComplete={() => toggleCompleteTodo(todo.text)}
               onDelete={() => deleteTodo(todo.text)}
-              ToDoIconCheck={ToDoIconCheck}
-              ToDoIconDelete={ToDoIconDelete}
+              TodoIconCheck={TodoIconCheck}
+              TodoIconDelete={TodoIconDelete}
             />
           ))}
-      </ToDoList>
+      </TodoList>
 
       {openModal && (
         <Modal>
-          <ToDoForm />
+          <TodoForm />
         </Modal>
       )}
 
-      <CreateToDoButton setOpenModal={setOpenModal} />
+      <CreateTodoButton setOpenModal={setOpenModal} />
     </React.Fragment>
   );
 }

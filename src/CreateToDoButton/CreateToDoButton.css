@@ -1,8 +1,8 @@
-.CreateToDoButton {
+.CreateTodoButton {
   width: 100%;
 }
 
-.CreateToDoButton__button {
+.CreateTodoButton__button {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -20,6 +20,6 @@
   z-index: 999999;
 }
 
-.CreateToDoButton__button:hover {
+.CreateTodoButton__button:hover {
   transform: rotate(180deg);
 }

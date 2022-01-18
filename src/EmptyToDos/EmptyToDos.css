@@ -1,4 +1,4 @@
-.EmptyToDos {
+.EmptyTodos {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,13 +6,13 @@
   padding: 0 20px;
 }
 
-.EmptyToDos img {
+.EmptyTodos img {
   width: 100%;
   max-width: 170px;
   height: auto;
 }
 
-.EmptyToDos h2 {
+.EmptyTodos h2 {
   font-size: 22px;
   color: #274472;
   font-weight: 600;
@@ -20,7 +20,7 @@
   margin-bottom: 0;
 }
 
-.EmptyToDos p {
+.EmptyTodos p {
   color: #41729f;
   font-weight: 600;
   font-size: 17px;

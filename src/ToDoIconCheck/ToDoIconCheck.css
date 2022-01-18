@@ -1,4 +1,4 @@
-.ToDoItem__check-mark {
+.TodoItem__check-mark {
   color: #41729f;
   font-weight: 800;
   font-size: 17px;
@@ -8,7 +8,7 @@
   background: none;
 }
 
-.ToDoItem__check-mark:hover,
-.ToDoItem__check-mark.active {
+.TodoItem__check-mark:hover,
+.TodoItem__check-mark.active {
   color: greenyellow;
 }

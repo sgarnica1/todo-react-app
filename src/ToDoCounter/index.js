@@ -1,14 +1,14 @@
 import React from "react";
-import { ToDoContext } from "../ToDoContext";
-import "./ToDoCounter.css";
+import { TodoContext } from "../TodoContext";
+import "./TodoCounter.css";
 
-export function ToDoCounter() {
-  const { completedTodos, totalTodos } = React.useContext(ToDoContext);
+export function TodoCounter() {
+  const { completedTodos, totalTodos } = React.useContext(TodoContext);
 
   return (
-    <section className="ToDoCounter">
-      <h1 className="ToDoCounter__title">Your Tasks</h1>
-      <h2 className="ToDoCounter__description">
+    <section className="TodoCounter">
+      <h1 className="TodoCounter__title">Your Tasks</h1>
+      <h2 className="TodoCounter__description">
         You've completed {completedTodos} out of {totalTodos} TODOs
       </h2>
     </section>

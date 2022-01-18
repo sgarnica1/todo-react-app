@@ -1,13 +1,13 @@
 import React from "react";
-import "./LoadingToDos.css"
+import "./LoadingTodos.css"
 
-function LoadingToDos() {
+function LoadingTodos() {
   return (
-    <article className="LoadingToDos">
-      <div className="LoadingToDos__circle"></div>
-      <div className="LoadingToDos__text"></div>
+    <article className="LoadingTodos">
+      <div className="LoadingTodos__circle"></div>
+      <div className="LoadingTodos__text"></div>
     </article>
   );
 }
 
-export { LoadingToDos };
+export { LoadingTodos };

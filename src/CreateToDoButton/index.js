@@ -1,14 +1,14 @@
 import React from "react";
-import "./CreateToDoButton.css";
+import "./CreateTodoButton.css";
 
-export function CreateToDoButton({ setOpenModal }) {
+export function CreateTodoButton({ setOpenModal }) {
   const onClickButton = () => {
     setOpenModal((prevState) => !prevState);
   };
 
   return (
-    <section className="CreateToDoButton">
-      <button className="CreateToDoButton__button" onClick={onClickButton}>
+    <section className="CreateTodoButton">
+      <button className="CreateTodoButton__button" onClick={onClickButton}>
         +
       </button>
     </section>

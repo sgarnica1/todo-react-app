@@ -1,4 +1,4 @@
-.ToDoForm {
+.TodoForm {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -13,13 +13,13 @@
   color: black;
 }
 
-.ToDoForm label {
+.TodoForm label {
   font-size: 26px;
   color: #274472;
   font-weight: 600;
 }
 
-.ToDoForm textarea {
+.TodoForm textarea {
   width: 90%;
   min-height: 150px;
   margin: 10px 0;
@@ -30,13 +30,13 @@
   resize: none;
 }
 
-.ToDoForm .ToDoForm__button-container {
+.TodoForm .TodoForm__button-container {
   display: flex;
   gap: 10px;
   width: 100%;
 }
 
-.ToDoForm .ToDoForm__button-container button {
+.TodoForm .TodoForm__button-container button {
   outline: none;
   border: none;
 
@@ -51,11 +51,11 @@
   font-weight: 500;
   cursor: pointer;
 }
-.ToDoForm .ToDoForm__button-container button:last-of-type {
+.TodoForm .TodoForm__button-container button:last-of-type {
   background-color: #41729f;
   color: white;
 }
 
-.ToDoForm .ToDoForm__button-container button:last-of-type:hover {
+.TodoForm .TodoForm__button-container button:last-of-type:hover {
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.5);
 }

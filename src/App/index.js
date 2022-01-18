@@ -1,12 +1,12 @@
 import React from "react";
 import { AppUI } from "./AppUI";
-import { ToDoProvider } from "../ToDoContext";
+import { TodoProvider } from "../TodoContext";
 
 function App() {
   return (
-    <ToDoProvider>
+    <TodoProvider>
       <AppUI />
-    </ToDoProvider>
+    </TodoProvider>
   );
 }
 

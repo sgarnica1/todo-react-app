@@ -1,9 +1,9 @@
 import React from "react";
-import "./EmptyToDos.css";
+import "./EmptyTodos.css";
 
-function EmptyToDos() {
+function EmptyTodos() {
   return (
-    <section className="EmptyToDos">
+    <section className="EmptyTodos">
       <img src="./empty.png" alt="Empty folder"/>
       <h2>There is nothing here to show :(</h2>
       <p>Add a new TODO to your list</p>
@@ -11,4 +11,4 @@ function EmptyToDos() {
   );
 }
 
-export { EmptyToDos };
+export { EmptyTodos };

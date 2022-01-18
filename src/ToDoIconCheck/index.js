@@ -1,11 +1,11 @@
 import React from "react";
 import { BsCheckLg } from "react-icons/bs";
-import './ToDoIconCheck.css'
+import './TodoIconCheck.css'
 
-function ToDoIconCheck(props) {
+function TodoIconCheck(props) {
   return (
     <button
-      className={`ToDoItem__check-mark ${props.completed && "active"}`}
+      className={`TodoItem__check-mark ${props.completed && "active"}`}
       onClick={props.onComplete}
     >
       <BsCheckLg />
@@ -13,4 +13,4 @@ function ToDoIconCheck(props) {
   );
 }
 
-export { ToDoIconCheck };
+export { TodoIconCheck };
