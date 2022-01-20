@@ -1,6 +1,6 @@
 import "./TodoSearch.css";
 
-export function TodoSearch({ searchValue, setSearchValue }) {
+export function TodoSearch({ searchValue, setSearchValue, loading }) {
   const onSearchValueChange = (event) => {
     setSearchValue(event.target.value);
   };
@@ -12,6 +12,7 @@ export function TodoSearch({ searchValue, setSearchValue }) {
         placeholder="Search for tasks"
         value={searchValue}
         onChange={onSearchValueChange}
+        disabled={loading}
       />
     </section>
   );

@@ -4,7 +4,7 @@
   justify-content: space-evenly;
   align-items: center;
   min-height: 250px;
-  width: 50%;
+  width: 70%;
   max-width: 500px;
   padding: 20px;
   border-radius: 20px;
@@ -56,6 +56,10 @@
   color: white;
 }
 
-.TodoForm .TodoForm__button-container button:last-of-type:hover {
+.TodoForm .TodoForm__button-container button:hover {
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.5);
+}
+
+.TodoForm .TodoForm__button-container button:focus-visible {
+  outline: 2px solid black;
 }

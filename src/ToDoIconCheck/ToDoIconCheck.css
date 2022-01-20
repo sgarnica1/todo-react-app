@@ -9,6 +9,7 @@
 }
 
 .TodoItem__check-mark:hover,
-.TodoItem__check-mark.active {
+.TodoItem__check-mark.active,
+.TodoItem__check-mark:focus-visible {
   color: greenyellow;
 }

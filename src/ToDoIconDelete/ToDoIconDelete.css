@@ -11,3 +11,8 @@
 .TodoItem__delete:hover {
   color: rgb(172, 19, 19);
 }
+
+.TodoItem__delete:focus-visible {
+  outline: 2px solid rgb(226, 150, 62);
+  border-radius: 10px;
+}
