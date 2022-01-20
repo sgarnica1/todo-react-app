@@ -63,7 +63,19 @@ function App() {
             TodoIconDelete={TodoIconDelete}
           />
         )}
-      />
+      >
+        {/* {(todo) => (
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+            onComplete={() => toggleCompleteTodo(todo.text)}
+            onDelete={() => deleteTodo(todo.text)}
+            TodoIconCheck={TodoIconCheck}
+            TodoIconDelete={TodoIconDelete}
+          />
+        )} */}
+      </TodoList>
 
       {openModal && (
         <Modal>

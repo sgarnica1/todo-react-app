@@ -2,6 +2,8 @@ import React from "react";
 import "./TodoList.css";
 
 export function TodoList(props) {
+  const renderFunc = props.children ? props.children : props.render;
+
   return (
     <section className="TodoList">
       <ul>
@@ -27,9 +29,7 @@ export function TodoList(props) {
           props.onEmptySearchResults(props.searchValue)}
 
         {/* Todos list */}
-        {props.filteredTodos.map(props.render)}
-
-        {props.children}
+        {props.filteredTodos.map(renderFunc)}
       </ul>
     </section>
   );
