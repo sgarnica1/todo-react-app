@@ -10,6 +10,7 @@ import { TodoForm } from "../TodoForm";
 import { Modal } from "../Modal";
 import { LoadingTodos } from "../LoadingTodos";
 import { EmptyTodos } from "../EmptyTodos";
+import { EmptySearchTodos } from "../EmptySearchTodos";
 import { TodosError } from "../TodosError";
 import { TodoIconCheck } from "../TodoIconCheck";
 import { TodoIconDelete } from "../TodoIconDelete";
@@ -42,11 +43,15 @@ function App() {
         error={error}
         loading={loading}
         filteredTodos={filteredTodos}
-
+        totalTodos={totalTodos}
+        searchValue={searchValue}
         // Render functions
         onError={() => <TodosError />}
         onLoading={(key) => <LoadingTodos key={key} />}
         onEmptyTodos={() => <EmptyTodos />}
+        onEmptySearchResults={(searchText) => (
+          <EmptySearchTodos searchValue={searchText} />
+        )}
         render={(todo) => (
           <TodoItem
             key={todo.text}
