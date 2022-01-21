@@ -1,0 +1,59 @@
+.StorageChangeAlert__background {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 9999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.StorageChangeAlert__modal {
+  height: 50%;
+  max-height: 250px;
+  width: 85%;
+  max-width: 500px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+  background: white;
+}
+
+.StorageChangeAlert__message {
+  color: #333;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.StorageChangeAlert__button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: #d32f2f;
+  color: white;
+  border-radius: 0 0 20px 20px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+
+.StorageChangeAlert__button:hover {
+  background-color: #b12727;
+}
+
+.StorageChangeAlert__button svg {
+  font-size: 18px;
+}

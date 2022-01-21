@@ -14,6 +14,7 @@ import { EmptySearchTodos } from "../EmptySearchTodos";
 import { TodosError } from "../TodosError";
 import { TodoIconCheck } from "../TodoIconCheck";
 import { TodoIconDelete } from "../TodoIconDelete";
+import { StorageChangeAlertWithStorageListener } from "../StorageChangeAlert";
 
 function App() {
   const {
@@ -29,21 +30,14 @@ function App() {
     searchValue,
     setSearchValue,
     addTodo,
+    sincronizeTodo,
   } = useTodos();
 
   return (
     <React.Fragment>
-      <TodoHeader>
-        <TodoCounter
-          completedTodos={completedTodos}
-          totalTodos={totalTodos}
-          loading={loading}
-        />
-        <TodoSearch
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-          loading={loading}
-        />
+      <TodoHeader loading={loading}>
+        <TodoCounter completedTodos={completedTodos} totalTodos={totalTodos} />
+        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
       </TodoHeader>
 
       <TodoList
@@ -71,19 +65,7 @@ function App() {
             TodoIconDelete={TodoIconDelete}
           />
         )}
-      >
-        {/* {(todo) => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            completed={todo.completed}
-            onComplete={() => toggleCompleteTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
-            TodoIconCheck={TodoIconCheck}
-            TodoIconDelete={TodoIconDelete}
-          />
-        )} */}
-      </TodoList>
+      ></TodoList>
 
       {openModal && (
         <Modal>
@@ -92,6 +74,8 @@ function App() {
       )}
 
       <CreateTodoButton setOpenModal={setOpenModal} />
+
+      <StorageChangeAlertWithStorageListener sincronize={sincronizeTodo} />
     </React.Fragment>
   );
 }

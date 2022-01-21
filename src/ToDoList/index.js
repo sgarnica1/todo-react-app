@@ -29,7 +29,7 @@ export function TodoList(props) {
           props.onEmptySearchResults(props.searchValue)}
 
         {/* Todos list */}
-        {props.filteredTodos.map(renderFunc)}
+        {!props.loading && !props.error && props.filteredTodos.map(renderFunc)}
       </ul>
     </section>
   );
