@@ -1,10 +1,13 @@
 import React from "react";
-import { withStorageListener } from "./withStorageListener";
+import { useStorageListener } from "./useStorageListener";
 import { IoIosRefresh } from "react-icons/io";
 import "./StorageChangeAlert.css";
 
-function StorageChangeAlert({ show, toggleShow }) {
+function StorageChangeAlert({ sincronize }) {
+  const { show, toggleShow } = useStorageListener(sincronize);
+
   const body = document.querySelector("body");
+
   if (show) {
     body.style.overflowY = "hidden";
     return (
@@ -29,7 +32,4 @@ function StorageChangeAlert({ show, toggleShow }) {
   return <></>;
 }
 
-const StorageChangeAlertWithStorageListener =
-  withStorageListener(StorageChangeAlert);
-
-export { StorageChangeAlertWithStorageListener };
+export { StorageChangeAlert };

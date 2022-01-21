@@ -14,7 +14,7 @@ import { EmptySearchTodos } from "../EmptySearchTodos";
 import { TodosError } from "../TodosError";
 import { TodoIconCheck } from "../TodoIconCheck";
 import { TodoIconDelete } from "../TodoIconDelete";
-import { StorageChangeAlertWithStorageListener } from "../StorageChangeAlert";
+import { StorageChangeAlert } from "../StorageChangeAlert";
 
 function App() {
   const {
@@ -75,7 +75,7 @@ function App() {
 
       <CreateTodoButton setOpenModal={setOpenModal} />
 
-      <StorageChangeAlertWithStorageListener sincronize={sincronizeTodo} />
+      <StorageChangeAlert sincronize={sincronizeTodo} />
     </React.Fragment>
   );
 }
