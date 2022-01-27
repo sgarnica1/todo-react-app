@@ -17,21 +17,26 @@ import { TodoIconDelete } from "../TodoIconDelete";
 import { StorageChangeAlert } from "../StorageChangeAlert";
 
 function App() {
+  const { states, stateUpdaters } = useTodos();
+
   const {
-    error,
     loading,
-    filteredTodos,
-    toggleCompleteTodo,
-    deleteTodo,
-    openModal,
-    setOpenModal,
-    completedTodos,
+    error,
     totalTodos,
+    completedTodos,
     searchValue,
+    filteredTodos,
+    openModal,
+  } = states;
+
+  const {
     setSearchValue,
     addTodo,
+    toggleCompleteTodo,
+    deleteTodo,
+    setOpenModal,
     sincronizeTodo,
-  } = useTodos();
+  } = stateUpdaters;
 
   return (
     <React.Fragment>
